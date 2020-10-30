@@ -65,7 +65,7 @@
     }
     var level = 0;
     var started = false;
-    $("body").keypress(function(event){
+    $("#level-title").click(function(){
         if(!started){
             $("#level-title").text("Level " + level);
             nextSequence();
@@ -90,7 +90,7 @@
             setTimeout(function(){
                 $("body").removeClass("game-over");
             } , 200);
-            $("#level-title").text("Game Over, Press Any Key to Restart");
+            $("#level-title").text("Game Over, Touch Here to Restart");
             startOver();
         }
     }
